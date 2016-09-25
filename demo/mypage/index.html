@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPage</title>
+    <link href="css/normalize.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script>
+
+
+
+        var arr = [1, [2, [3, [4], 5], 6], 7];
+
+        function join1(stringCollection, separator) {
+            var concatenatedString = "";
+            for (var i = 0; i < stringCollection.length; i++) {
+                concatenatedString = concatenatedString.concat(separator).concat(stringCollection[i]);
+            }
+            return concatenatedString;
+        }
+
+        function flatten(arr) {
+            return arr.join(',').split(',').map(Number);
+        }
+        ;
+
+        console.log(flatten(arr));
+        console.log(join1(arr, ","));
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo"><a href="#">Jackey</a></div>
+        <ul>
+            <li><a href="" class="active">Item1</a></li>
+            <li><a href="">Item2</a></li>
+            <li><a href="">Item3</a></li>
+        </ul>
+    </nav>
+    <div id="banner">
+        <div class="inner">
+            <h1>金哥</h1>
+
+            <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda at
+                consequatur consequuntur dolorem earum esse et fugit minus molestiae natus necessitatibus pariatur
+                perferendis, quasi saepe, temporibus vel veritatis voluptatum.</p>
+            <button>了解我</button>
+            <div class="more">
+                更多
+            </div>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <section class="section1">
+        <div class="wrapper">
+            <div>
+                <h2>一个标题</h2>
+
+                <div class="hr"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto corporis minus sint.
+                    Dolor ex expedita iusto libero, magnam natus neque omnis porro quam quia, quisqua</p>
+            </div>
+            <div>
+                <span>item1</span><span>item2</span><span>item3</span>
+            </div>
+        </div>
+
+    </section>
+    <section class="section2"></section>
+    <section class="section3"></section>
+</div>
+<footer></footer>
+</body>
+</html>
